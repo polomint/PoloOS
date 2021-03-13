@@ -41,3 +41,8 @@ Alternatively, you should be able to load the operating system on a USB drive an
 Remove the build-evironment image:
  - `docker rmi poloos-buildenv -f`
 
+
+
+## Test Builds
+ - 20210313: 
+[PoloOS.zip](https://github.com/polomint/PoloOS/files/6134749/PoloOS.zip)
