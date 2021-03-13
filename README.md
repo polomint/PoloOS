@@ -31,7 +31,7 @@ To leave the build environment, enter `exit`.
 
 You can emulate your operating system using [Qemu](https://www.qemu.org/): (Don't forget to add qemu to your path!). Note you may get an error regarding the BIOS, the -L switch should solve that.
 
- - `qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso -L "C:\Program Files\qemu`
+ - `qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso -L "C:\Program Files\qemu"`
  - NOTE: When building your operating system, if changes to your code fail to compile, ensure your QEMU emulator has been closed, as this will block writing to `kernel.iso`.
 
 Alternatively, you should be able to load the operating system on a USB drive and boot into it when you turn on your computer. (I haven't actually tested this yet.)
