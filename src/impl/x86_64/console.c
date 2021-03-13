@@ -38,11 +38,7 @@ void Console_Run()
 
     while (!exit_console)
     {
-        // Get key
-
-        // Display character or move cursor...
-
-
+        //keyboard_handler();
     }
 }
 
