@@ -1,0 +1,74 @@
+QEMU
+=====
+
+Create an image by typing qemu-img create -f qcow2 [name].qcow2 30G.
+
+qemu-system-x86_64 -accel whpx -hda .\[name].qcow2 -m 512 -net nic,model=virtio -net user -cdrom .\[name].iso -vga std -boot strict=on. It should start up and you can proceed to install the OS.
+Second time you start up the machine you don't need to type -cdrom anymore. Just qemu-system-x86_64 -accel whpx -hda .\[name].qcow2 -m 512 -net nic,model=virtio -net user -vga std -boot strict=on
+
+ERROR: qemu: could not load PC BIOS 'bios-256k.bin
+--------------------------------------------
+Use bios-256k.bin that comes with QEMU. Add the following while running your command ... -L "C:\Program Files\qemu
+
+DOCKER
+=======
+
+docker build buildenv -t poloos-buildenv
+
+
+BUILD
+======
+
+Enter build environment
+------------------------
+Linux or MacOS: docker run --rm -it -v "$pwd":/root/env poloos-buildenv
+Windows (CMD): docker run --rm -it -v "%cd%":/root/env poloos-buildenv
+Windows (PowerShell): docker run --rm -it -v "${pwd}:/root/env" poloos-buildenv
+
+Exit build environment
+-----------------------
+docker rmi poloos-buildenv
+
+Build for x86
+--------------
+make build-x86_64
+
+qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso -L "C:\Program Files\qemu"
+
+qemu-system-x86_64 -accel whpx -hda .\.qcow2 -m 512 -net nic,model=virtio -net user -cdrom .\[name].iso -vga std -boot strict=on -L "C:\Program Files\qemu"
+
+ASCII CODES:
+=============
+
+https://www.ascii-codes.com/
+
+	0	1	2	3	4	5	6	7	8	9	A	B	C	D	E	F
+B				│	┤	╡	╢	╖	╕	╣	║	╗	╝	╜	╛	┐
+C	└	┴	┬	├	─	┼	╞	╟	╚	╔	╩	╦	╠	═	╬	╧
+D	╨	╤	╥	╙	╘	╒	╓	╫	╪	┘	┌					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

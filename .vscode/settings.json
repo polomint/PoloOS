@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "sys_globals.h": "c",
+        "string.h": "c"
+    }
+}
